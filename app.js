@@ -146,7 +146,7 @@
 // function juftVaToqAjratish(numbers) {
 //   const juftSonlar = numbers.filter((number) => number % 2 === 0);
 //   const toqSonlar = numbers.filter((number) => number % 2 !== 0);
-//   return [juftSonlar, toqSonlar];
+//   return [ toqSonlar, juftSonlar];
 // }
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -314,11 +314,160 @@
 
 // function getTruthyFalsy(arr) {
 //   return {
-//     truthy: arr.filter(Boolean), 
+//     truthy: arr.filter(Boolean),
 //     falsy: arr.filter(val => !Boolean(val))
 //   };
 // }
 
 // const inputArray = [false, 1, 10, "", null, "abdulvohid", 1.13, 0];
 // const result = getTruthyFalsy(inputArray);
-// console.log(result); 
+// console.log(result);
+
+// N{18}
+
+// function getWordLengths(str) {
+//   return str.split(" ").map((word) => word.length);
+// }
+
+// const inputString = "Men Abdulvohidman. Dasturchiman";
+// const wordLengths = getWordLengths(inputString);
+// console.log(wordLengths);
+
+// N{19}
+
+// function checkStringContainsSpace(str) {
+//   return str.split(" ").length > 1;
+// }
+
+// const input = "Men Abdulvohidman. Dasturchiman";
+// const result = checkStringContainsSpace(input);
+
+// console.log(result);
+
+// N{20}
+
+// function objectToKeyValuePairsArray(obj) {
+//   return Object.entries(obj).map(([key, value]) => key + value);
+// }
+
+// const obj = {
+//   a: 2,
+//   b: 5,
+//   c: 7,
+// };
+
+// const result = objectToKeyValuePairsArray(obj);
+
+// console.log(result);
+
+// N{21}
+
+// function digitSum(n) {
+//   if (n === 0) {
+//     return 0;
+//   }
+
+//   return (n % 10) + digitSum(Math.floor(n / 10));
+// }
+
+// const number = 12345;
+// const result = digitSum(number);
+
+// console.log(result);
+
+// N{22}
+
+// const averagePercentage =
+//   pupils.reduce((acc, pupil) => acc + pupil.percentage, 0) / pupils.length;
+
+// const updatedPupils = pupils.map((pupil) => {
+//   return {
+//     ...pupil,
+//     averageClassPercentage: averagePercentage,
+//   };
+// });
+
+// return updatedPupils;
+
+// N{23}
+
+// const gradeMapping = (pupil) => {
+//   const percentage = pupil.percentage;
+
+//   if (percentage >= 90) {
+//     return 5;
+//   } else if (percentage >= 80) {
+//     return 4;
+//   } else if (percentage >= 70) {
+//     return 3;
+//   } else {
+//     return 2;
+//   }
+// };
+
+// const updatedPupils = pupils.map((pupil) => {
+//   return {
+//     ...pupil,
+//     grade: gradeMapping(pupil),
+//   };
+// });
+
+// return updatedPupils;
+
+// N{24}
+
+// const passOrFailMapping = (pupil) => {
+//   return pupil.percentage >= 70;
+// };
+
+// const updatedPupils = pupils.map((pupil) => {
+//   return {
+//     ...pupil,
+//     isPassed: passOrFailMapping(pupil),
+//   };
+// });
+
+// return updatedPupils;
+
+// N{25}
+
+// const students = [
+//   {
+//       name: "Elbek",
+//       percentage: 95,
+//   },
+//   {
+//       name: "Zafar",
+//       percentage: 78,
+//   },
+//   {
+//       name: "Dear",
+//       percentage: 83,
+//   },
+//   {
+//       name: "Brave",
+//       percentage: 88,
+//   },
+//   {
+//       name: "Babur",
+//       percentage: 66,
+//   },
+//   {
+//       name: "Camron",
+//       percentage: 75,
+//   },
+// ];
+
+// let passedCount = 0;
+// let failedCount = 0;
+
+// students.forEach(student => {
+//   if (student.percentage >= 70) {
+//       passedCount++;
+//   } else {
+//       failedCount++;
+//   }
+// });
+
+// console.log("Number of students who passed:", passedCount);
+// console.log("Number of students who failed:", failedCount);
