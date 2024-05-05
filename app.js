@@ -143,5 +143,182 @@
 // console.log(ageDifference);
 
 // N{7}
+// function juftVaToqAjratish(numbers) {
+//   const juftSonlar = numbers.filter((number) => number % 2 === 0);
+//   const toqSonlar = numbers.filter((number) => number % 2 !== 0);
+//   return [juftSonlar, toqSonlar];
+// }
 
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+// const [toqlar, juftlar] = juftVaToqAjratish(numbers);
+
+// console.log("Toq sonlar : ", toqlar);
+// console.log("Juft sonlar :", juftlar);
+
+// N{8}
+
+// function removeDuplicates(arr) {
+//   return arr.reduce((unique, current) => {
+//     if (!unique.includes(current)) {
+//       unique.push(current);
+//     }
+//     return unique;
+//   }, []);
+// }
+
+// const arr = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueArr = removeDuplicates(arr);
+// console.log(uniqueArr);
+
+// N{9}
+
+// function sortProducts(products, sortBy, sortOrder = "asc") {
+//   return products.sort((a, b) => {
+//     let result;
+//     if (typeof a[sortBy] === "string") {
+//       result = a[sortBy].localeCompare(b[sortBy]);
+//     } else {
+//       result = a[sortBy] - b[sortBy];
+//     }
+
+//     return sortOrder === "asc" ? result : -result;
+//   });
+// }
+
+// const products = [
+//   { id: 1, name: "Product A", price: 10, rating: 4.5, discount: 0.1 },
+//   { id: 2, name: "Product B", price: 20, rating: 3.8, discount: 0.2 },
+// ];
+
+// const sortedById = sortProducts(products, "id");
+// const sortedByNameDesc = sortProducts(products, "name", "desc");
+// const sortedByPriceAsc = sortProducts(products, "price");
+
+// console.log(sortedById);
+// console.log(sortedByNameDesc);
+// console.log(sortedByPriceAsc);
+
+// N{10}
+
+// function findHighestRatedProduct(products) {
+//   const sortedByRating = products.sort((a, b) => b.rating - a.rating);
+
+//   return sortedByRating[0];
+// }
+
+// const products = [
+//   { id: 1, name: "Product A", price: 10, rating: 4.5, discount: 0.1 },
+//   { id: 2, name: "Product B", price: 20, rating: 3.8, discount: 0.2 },
+// ];
+
+// const highestRatedProduct = findHighestRatedProduct(products);
+// console.log(highestRatedProduct);
+
+// N{11}
+
+// function findLowestPricedProduct(products) {
+//   const sortedByPrice = products.sort((a, b) => a.price - b.price);
+
+//   return sortedByPrice[0];
+// }
+
+// const products = [
+//   { id: 1, name: "Product A", price: 10, rating: 4.5, discount: 0.1 },
+//   { id: 2, name: "Product B", price: 20, rating: 3.8, discount: 0.2 },
+
+// ];
+
+// const lowestPricedProduct = findLowestPricedProduct(products);
+// console.log(lowestPricedProduct);
+
+// N{12}
+
+// function calculateTotalProductPrice(products) {
+//   return products.reduce((total, product) => total + product.price, 0);
+// }
+
+// const products = [
+//   { id: 1, name: "Product A", price: 10, rating: 4.5, discount: 0.1 },
+//   { id: 2, name: "Product B", price: 20, rating: 3.8, discount: 0.2 },
+// ];
+
+// const totalPrice = calculateTotalProductPrice(products);
+// console.log(totalPrice);
+
+// N{13}
+
+// function getProductNames(products) {
+//   return products.map((product) => product.name);
+// }
+
+// const products = [
+//   { id: 1, name: "Product A", price: 10, rating: 4.5, discount: 0.1 },
+//   { id: 2, name: "Product B", price: 20, rating: 3.8, discount: 0.2 },
+// ];
+
+// const productNames = getProductNames(products);
+// console.log(productNames);
+
+// N{14}
+
+// function findProductNameById(products, idToFind) {
+//   const foundProduct = products.find((product) => product.id === idToFind);
+
+//   return foundProduct ? foundProduct.name : null;
+// }
+
+// const products = [
+//   { id: 1, name: "Product A", price: 10, rating: 4.5, discount: 0.1 },
+//   { id: 2, name: "Product B", price: 20, rating: 3.8, discount: 0.2 },
+//   { id: 5, name: "Product E", price: 30, rating: 4.2, discount: 0.15 },
+// ];
+
+// const productName = findProductNameById(products, 5);
+// console.log(productName);
+
+// N{15}
+
+// function removeProductById(products, idToRemove) {
+//   return products.filter((product) => product.id !== idToRemove);
+// }
+
+// const products = [
+//   { id: 6, name: "Smarthpone", price: 12000, rating: 4.5, discount: 20 },
+//   { id: 2, name: "Acer", price: 10000, rating: 4.3, discount: 10 },
+//   { id: 1, name: "Mac book", price: 17000, rating: 4.7, discount: 40 },
+//   { id: 4, name: "HP", price: 21000, rating: 4.1, discount: 30 },
+//   { id: 5, name: "Dell", price: 35000, rating: 4.9, discount: 30 },
+// ];
+
+// const updatedProducts = removeProductById(products, 4);
+// console.log(updatedProducts);
+
+// N{16}
+
+// function isOnlyLetters(str) {
+//   return str
+//     .split("")
+//     .every((char) => char.toLowerCase() >= "a" && char.toLowerCase() <= "z");
+// }
+
+// const testString1 = "Hello";
+// const testString2 = "Hello123";
+// const testString3 = "123";
+
+// console.log(isOnlyLetters(testString1));
+// console.log(isOnlyLetters(testString2));
+// console.log(isOnlyLetters(testString3));
+
+// N{17}
+
+// function getTruthyFalsy(arr) {
+//   return {
+//     truthy: arr.filter(Boolean), 
+//     falsy: arr.filter(val => !Boolean(val))
+//   };
+// }
+
+// const inputArray = [false, 1, 10, "", null, "abdulvohid", 1.13, 0];
+// const result = getTruthyFalsy(inputArray);
+// console.log(result); 
